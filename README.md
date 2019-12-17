@@ -6,25 +6,26 @@ All the mappings can be translated to one another for a given version: `spigot2m
 
 Supported versions:
 
-|        | Spigot   | MCP      | Searge   | Yarn     | Intermediary |
-|--------|----------|----------|----------|----------|--------------|
-| 1.14.4 | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713;     |
-| 1.14.3 | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713;     |
-| 1.14.2 | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713;     |
-| 1.14.1 | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713;     |
-| 1.14   | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713;     |
-| 1.13.2 | &#x2713; | &#x2713; | &#x2713; |          |              |
-| 1.13.1 | &#x2713; | &#x2713; | &#x2713; |          |              |
-| 1.13   | &#x2713; | &#x2713; | &#x2713; |          |              |
-| 1.12.2 | &#x2713; | &#x2713; | &#x2713; |          |              |
-| 1.12   | &#x2713; | &#x2713; | &#x2713; |          |              |
-| 1.11   | &#x2713; | &#x2713; | &#x2713; |          |              |
-| 1.10.2 | &#x2713; | &#x2713; | &#x2713; |          |              |
-| 1.9.4  | &#x2713; | &#x2713; | &#x2713; |          |              |
-| 1.9    | &#x2713; | &#x2713; | &#x2713; |          |              |
-| 1.8.8  | &#x2713; | &#x2713; | &#x2713; |          |              |
-| 1.8    | &#x2713; | &#x2713; | &#x2713; |          |              |
-| 1.7.10 |          | &#x2713; | &#x2713; |          |              |
+|        | Spigot   | MCP      | Searge   | Intermediary |
+|--------|----------|----------|----------|--------------|
+| 1.15   | &#x2713; | &#x2713; | &#x2713; | &#x2713;     |
+| 1.14.4 | &#x2713; | &#x2713; | &#x2713; | &#x2713;     |
+| 1.14.3 | &#x2713; | &#x2713; | &#x2713; | &#x2713;     |
+| 1.14.2 | &#x2713; | &#x2713; | &#x2713; | &#x2713;     |
+| 1.14.1 | &#x2713; | &#x2713; | &#x2713; | &#x2713;     |
+| 1.14   | &#x2713; | &#x2713; | &#x2713; | &#x2713;     |
+| 1.13.2 | &#x2713; | &#x2713; | &#x2713; |              |
+| 1.13.1 | &#x2713; | &#x2713; | &#x2713; |              |
+| 1.13   | &#x2713; | &#x2713; | &#x2713; |              |
+| 1.12.2 | &#x2713; | &#x2713; | &#x2713; |              |
+| 1.12   | &#x2713; | &#x2713; | &#x2713; |              |
+| 1.11   | &#x2713; | &#x2713; | &#x2713; |              |
+| 1.10.2 | &#x2713; | &#x2713; | &#x2713; |              |
+| 1.9.4  | &#x2713; | &#x2713; | &#x2713; |              |
+| 1.9    | &#x2713; | &#x2713; | &#x2713; |              |
+| 1.8.8  | &#x2713; | &#x2713; | &#x2713; |              |
+| 1.8    | &#x2713; | &#x2713; | &#x2713; |              |
+| 1.7.10 |          | &#x2713; | &#x2713; |              |
 
 Supported formats:
 
@@ -34,7 +35,7 @@ Supported formats:
 - Tiny <small>(fields descriptors don't exist)</small>
 - JSON
 
-These mappings were made possible by @Techcable, the MCP team, Bukkit, SpigotMC, FabricMC, and various other people.
+These mappings were made possible by @Techcable, the MCP team, Bukkit, SpigotMC, and various other people.
 
 ## TODO
 
@@ -49,5 +50,3 @@ These mappings were made possible by @Techcable, the MCP team, Bukkit, SpigotMC,
 * The MCP mappings are the property of the MCP Team and are released under the MCP License.
 
 * The Spigot mappings are copyright SpigotMC Pty. Ltd.
-
-* The Yarn mappings are licensed under the Creative Commons Zero license.
