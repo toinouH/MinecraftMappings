@@ -29,7 +29,6 @@ dependencies {
     compile "com.google.code.gson:gson:2.8.0"
     compile "com.google.guava:guava:21.0"
     compile "net.md-5:SpecialSource:1.8.5"
-    compile "cuchaz:enigma:0.13.1.+:all"
 }
 
 compileKotlin {
