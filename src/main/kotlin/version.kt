@@ -36,7 +36,7 @@ enum class MinecraftVersion(
     V1_9("1.9", "snapshot_nodoc_20160516", false, true),
     V1_8_8("1.8.8", "snapshot_nodoc_20151216", false, true),
     V1_8("1.8", "snapshot_nodoc_20141130", false, true),
-    V1_7_10("1.7.10", "snapshot_nodoc_20140925", false, false);
+    V1_7_10("1.7.10", "snapshot_nodoc_20140925", true, false);
 
     fun generateMappings(): List<Pair<String, Mappings>> {
         // Mappings, fromObf
