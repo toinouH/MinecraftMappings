@@ -17,7 +17,7 @@ enum class MinecraftVersion(
     val mcpConfig: Boolean = false,
     val spigot: Boolean = false
 ) {
-    V1_15_2("1.15.2", "snapshot_20200122", true, true),
+    V1_15_2("1.15.2", "snapshot_20200225", true, true),
     V1_15_1("1.15.1", "snapshot_20191217", true, true),
     V1_15("1.15", "snapshot_nodoc_20191212", true, true),
     V1_14_4("1.14.4", "snapshot_nodoc_20190719", true, true),
