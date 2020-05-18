@@ -173,14 +173,12 @@ fun downloadSrgMappings(minecraftVersion: String): Mappings {
 
 fun getMCPConfigMappings(minecraftVersion: String): Mappings {
     val cacheFolder = File("cache/")
-    if (!cacheFolder.exists()) {
-        cacheFolder.mkdirs()
-    }
+
     val obf2srgFile = File(cacheFolder, "mcpconfig-$minecraftVersion-joined.srg")
 
     if (!obf2srgFile.exists()) {
         println("mcpconfig $minecraftVersion: generating srg from tsrg")
-        val tsrgFile = File("MCPConfig/versions/$minecraftVersion/joined.tsrg")
+        val tsrgFile = File("MCPConfig/versions/release/$minecraftVersion/joined.tsrg")
         TSrgUtil.toSrg(tsrgFile, obf2srgFile)
     }
 
