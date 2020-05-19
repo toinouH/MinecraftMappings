@@ -1,5 +1,7 @@
 package provider
 
+import cuchaz.enigma.ProgressListener
+import cuchaz.enigma.translation.mapping.serde.MappingFormat
 import net.techcable.srglib.format.MappingsFormat
 import net.techcable.srglib.mappings.Mappings
 import java.io.File
@@ -101,9 +103,9 @@ fun getYarnMappingsFromSubmodule(minecraftVersion: String): Mappings {
     "git checkout $minecraftVersion".runCommand(yarnFolder)
 
     println("yarn $minecraftVersion: reading mappings directory")
-    val entryTree = MappingFormat.ENIGMA_DIRECTORY.read(File(yarnFolder, "mappings").toPath(), ProgressListener.VOID)
+    val entryTree = MappingFormat.ENIGMA_DIRECTORY.read(File(yarnFolder, "mappings").toPath(), ProgressListener.none(), null)
     println("yarn $minecraftVersion: writing mappings to srg")
-    MappingFormat.SRG_FILE.write(entryTree, mappingsFile.toPath(), ProgressListener.VOID)
+    MappingFormat.SRG_FILE.write(entryTree, mappingsFile.toPath(), ProgressListener.none(), null)
 
     // TODO: fix these
     val brokenClasses = listOf(
