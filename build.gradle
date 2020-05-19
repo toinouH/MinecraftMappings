@@ -15,7 +15,7 @@ repositories {
     }
     maven {
         name "Modmuss50 Repository"
-        url 'https://maven.modmuss50.me'
+        url 'https://maven.fabricmc.net'
     }
 }
 
@@ -29,6 +29,7 @@ dependencies {
     compile "com.google.code.gson:gson:2.8.0"
     compile "com.google.guava:guava:21.0"
     compile "net.md-5:SpecialSource:1.8.5"
+    compile "cuchaz:enigma:0.16.0+build.172"
 }
 
 compileKotlin {
