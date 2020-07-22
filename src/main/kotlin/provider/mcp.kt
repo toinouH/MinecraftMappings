@@ -173,7 +173,9 @@ fun downloadSrgMappings(minecraftVersion: String): Mappings {
 
 fun getMCPConfigMappings(minecraftVersion: String): Mappings {
     val cacheFolder = File("cache/")
-
+    if (!cacheFolder.exists()) {
+        cacheFolder.mkdirs()
+    }
     val obf2srgFile = File(cacheFolder, "mcpconfig-$minecraftVersion-joined.srg")
 
     if (!obf2srgFile.exists()) {
