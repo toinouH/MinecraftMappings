@@ -18,6 +18,7 @@ enum class MinecraftVersion(
     val yarn: Boolean = false,
     val spigot: Boolean = false
 ) {
+    V1_16_2_YARN("1.16.2", null, false, true, true),
     V1_16_1_YARN("1.16.1", null, false, true, true),
     V1_16_1("1.16.1", "snapshot_20200625", false, true, true),
     V1_15_2("1.15.2", "snapshot_20200515", true, false, true),
