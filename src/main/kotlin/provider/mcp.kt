@@ -18,7 +18,7 @@ import java.util.*
 import java.util.zip.ZipInputStream
 import kotlin.system.exitProcess
 
-fun downloadMcpMappings(srgMappings: Mappings, mappingsVersion: String): Mappings {
+fun downloadMcpMappings(srgMappings: Mappings, mappingsVersion: String, mcVersion: String): Mappings {
     val cacheFile = File("cache/mcp_$mappingsVersion/mcp.json")
     val fieldNames = HashMap<String, String>()
     val methodNames = HashMap<String, String>()
@@ -75,8 +75,12 @@ fun downloadMcpMappings(srgMappings: Mappings, mappingsVersion: String): Mapping
         // Parse the mappings data files
         try {
             var openStream: InputStream
-            if (minecraftVersion != "1.16.3") {
-                System.err.println("版本不匹配, 将使用本地文件")
+            if (minecraftVersion != mcVersion) {
+                System.err.println("Version does not match, local file will be used")
+                if (File("mappings.zip") == null) {
+                    System.err.println("Unable to find file: mappings.zip")
+                    exitProcess(1)
+                }
                 openStream = File("mappings.zip").inputStream()
             } else {
                 val url = URL("http://export.mcpbot.bspk.rs/mcp_$fullMappingsChannel/$mappingsId-$minecraftVersion/mcp_$fullMappingsChannel-$mappingsId-$minecraftVersion.zip")

@@ -55,7 +55,7 @@ enum class MinecraftVersion(
             } else {
                 downloadSrgMappings(mcVersion)
             }
-            val srg2mcpMappings = downloadMcpMappings(obf2srgMappings, mcpVersion)
+            val srg2mcpMappings = downloadMcpMappings(obf2srgMappings, mcpVersion, mcVersion)
             val obf2mcp = Mappings.chain(ImmutableList.of(obf2srgMappings, srg2mcpMappings))
             mappings.add(Pair(obf2srgMappings, "srg"))
             mappings.add(Pair(obf2mcp, "mcp"))
