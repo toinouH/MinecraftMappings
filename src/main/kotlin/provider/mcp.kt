@@ -12,6 +12,7 @@ import net.techcable.srglib.format.MappingsFormat
 import net.techcable.srglib.mappings.Mappings
 import java.io.File
 import java.io.IOException
+import java.io.InputStream
 import java.net.URL
 import java.util.*
 import java.util.zip.ZipInputStream
@@ -70,12 +71,19 @@ fun downloadMcpMappings(srgMappings: Mappings, mappingsVersion: String): Mapping
             System.err.println("Unable to find mappings: $mappingsVersion")
             exitProcess(1)
         }
+
         // Parse the mappings data files
         try {
-            val url =
-                URL("http://export.mcpbot.bspk.rs/mcp_$fullMappingsChannel/$mappingsId-$minecraftVersion/mcp_$fullMappingsChannel-$mappingsId-$minecraftVersion.zip")
-            println("Downloading MCP mappings from: $url")
-            ZipInputStream(url.openStream()).use {
+            var openStream: InputStream
+            if (minecraftVersion != "1.16.3") {
+                System.err.println("版本不匹配, 将使用本地文件")
+                openStream = File("mappings.zip").inputStream()
+            } else {
+                val url = URL("http://export.mcpbot.bspk.rs/mcp_$fullMappingsChannel/$mappingsId-$minecraftVersion/mcp_$fullMappingsChannel-$mappingsId-$minecraftVersion.zip")
+                println("Downloading MCP mappings from: $url")
+                openStream = url.openStream()
+            }
+            ZipInputStream(openStream).use {
                 var entry = it.nextEntry
                 do {
                     when (entry.name) {
