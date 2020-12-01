@@ -7,3 +7,4 @@ __pycache__
 .atom_jvm_classpath
 build/
 .gradle/
+*.zip
